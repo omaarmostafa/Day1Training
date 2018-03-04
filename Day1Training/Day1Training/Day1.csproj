@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="Plugin.Connectivity" Version="1.0.2" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.4.118" />
+    <PackageReference Include="Xam.Plugin.DeviceInfo" Version="3.0.2" />
+    <PackageReference Include="Xamarin.Forms" Version="2.5.0.122203" />
+    <PackageReference Include="Prism.Unity.Forms" Version="7.0.0.168-pre" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Syncfusion.Core.XForms">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\15.4.0.17\Xamarin\lib\pcl\Syncfusion.Core.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.DataSource.Portable">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\15.4.0.17\Xamarin\lib\pcl\Syncfusion.DataSource.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.GridCommon.Portable">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\15.4.0.17\Xamarin\lib\pcl\Syncfusion.GridCommon.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfListView.XForms">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\15.4.0.17\Xamarin\lib\pcl\Syncfusion.SfListView.XForms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\Cars.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Login.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Register.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\StudentDetails.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

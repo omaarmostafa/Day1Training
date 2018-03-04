@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<prism:PrismApplication xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Unity;assembly=Prism.Unity.Forms"
+                xmlns:controls="clr-namespace:Day1Training"
+                        
+             xmlns:TemplateSelectors="clr-namespace:Day1Training.TemplateSelector"
+             x:Class="Day1Training.App">
+	<Application.Resources>
+
+		<!-- Application resource dictionary -->
+        <ResourceDictionary>
+        <Style x:Key="NormalLabelDark" TargetType="Label">
+            <Setter Property="FontSize"  >
+                <Setter.Value>
+                    <OnPlatform x:TypeArguments="x:Double">
+                        <OnPlatform.Android>10</OnPlatform.Android>
+                        <OnPlatform.WinPhone>40</OnPlatform.WinPhone>
+                    </OnPlatform>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+            <DataTemplate  x:Key="GrayDataTemplate">
+                <controls:GridViewXamlCell>
+                    <Grid Padding="5" >
+                        <Grid  BackgroundColor="Red"  Padding="10" >
+                            <Label TextColor="Green" Text="{Binding Name}" FontSize="Small"  HorizontalOptions="End" VerticalOptions="Fill"/>
+                        </Grid>
+                    </Grid>
+                </controls:GridViewXamlCell>
+            </DataTemplate>
+
+
+            <DataTemplate  x:Key="GreenDataTemplate">
+                <controls:GridViewXamlCell>
+                    <Grid Padding="5" >
+                        <Grid  BackgroundColor="Green"  Padding="10" >
+                            <Label TextColor="Green" Text="{Binding Name}" FontSize="Small"  HorizontalOptions="End" VerticalOptions="Fill"/>
+                        </Grid>
+                    </Grid>
+                </controls:GridViewXamlCell>
+            </DataTemplate>
+
+            <DataTemplate x:Key="Listviewtemplate">
+                <ViewCell >
+                    <StackLayout Orientation="Horizontal">
+                        <Label Style="{StaticResource NormalLabelDark}"  Text="{Binding Id}" HorizontalOptions="Start">
+
+                        </Label>
+                        <Label Text="{Binding Name}" HorizontalOptions="Center">
+                     
+                        </Label>
+                        <Label Text="{Binding Grade}" HorizontalOptions="End"/>
+
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+
+
+
+            <TemplateSelectors:GridTemplateSelector x:Key="GridTemplateSelector" GrayDataTemplate="{StaticResource GrayDataTemplate}" GreenDataTemplate="{StaticResource GreenDataTemplate}"/>
+
+
+
+        </ResourceDictionary>
+    </Application.Resources>
+</prism:PrismApplication>

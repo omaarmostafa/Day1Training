@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Day1Training.Views.MainPage"
+             xmlns:behaviors="clr-namespace:Day1Training.Behaviors"
+             xmlns:controls="clr-namespace:Day1Training"
+             xmlns:effects="clr-namespace:Day1Training"
+             Title="{Binding Title}">
+
+    <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Vertical" VerticalOptions="CenterAndExpand">
+        <!--<ListView ItemTemplate={StaticResource Listviewtemplate} ItemsSource="{Binding Students}" SelectedItem="{Binding SelectedStudent,Mode=TwoWay}" >
+
+        </ListView>-->
+        <!--<controls:GridView
+		    x:Name="listView"
+            IsGroupingEnabled="false"
+            ItemsSource="{Binding Students}"
+            RowHeight="130"    
+            ItemTemplate="{StaticResource GridTemplateSelector}"
+			MinItemWidth="230">
+  
+        </controls:GridView>-->
+
+
+
+        <!--<syncfusion:SfListView x:Name="listView" WidthRequest="500" HeightRequest="1000"
+                    ItemsSource="{Binding Students}"
+                    SelectionMode="Single"     
+                    SelectedItem="{Binding SelectedStudent,Mode=TwoWay}"
+                    ItemTemplate="{StaticResource GridTemplateSelector}"
+                    ItemSize="180">
+
+            <syncfusion:SfListView.LayoutManager>
+                <syncfusion:GridLayout SpanCount="5" />
+            </syncfusion:SfListView.LayoutManager>
+        </syncfusion:SfListView>-->
+
+
+
+
+    </StackLayout>
+</ContentPage>

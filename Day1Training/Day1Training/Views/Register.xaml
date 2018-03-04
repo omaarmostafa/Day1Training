@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Day1Training.Views.Register">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Email:" HorizontalOptions="Start" WidthRequest="200" />
+                <Entry Text="{Binding UserName,Mode=TwoWay}" HorizontalOptions="End" WidthRequest="150"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Password:" HorizontalOptions="Start" WidthRequest="200" />
+                <Entry Text="{Binding Password,Mode=TwoWay}" HorizontalOptions="End" WidthRequest="150"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Confirm Password:" HorizontalOptions="Start" WidthRequest="200" />
+                <Entry Text="{Binding ConfirmPassword,Mode=TwoWay}" HorizontalOptions="End" WidthRequest="150"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Register" HorizontalOptions="CenterAndExpand" Command="{Binding Regsitercommand}" WidthRequest="400" />
+                <ActivityIndicator IsVisible="{Binding IsLoading}" WidthRequest="100" Color="Green" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
